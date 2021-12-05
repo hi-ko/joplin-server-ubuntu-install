@@ -14,5 +14,6 @@
     ````
 6. test run.sh
 7. if run.sh works as expected you can use `joplin.service` to run joplin as a systemd service
+8. in the nginx folder you find an configuration example how to access the joplin server from your reverse proxy
 
 s. [Joplin Server pre-release is now available](https://discourse.joplinapp.org/t/joplin-server-pre-release-is-now-available/13605/176)
