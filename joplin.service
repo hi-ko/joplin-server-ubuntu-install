@@ -1,0 +1,16 @@
+[Unit]
+Description=
+Documentation=https://discourse.joplinapp.org/t/joplin-server-pre-release-is-now-available/13605
+After=network.target
+
+[Service]
+#Environment=NODE_PORT=3001
+Type=simple
+User=joplin
+ExecStart=/home/joplin/run.sh
+WorkingDirectory=/home/joplin
+
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
