@@ -6,11 +6,11 @@
     1. create user joplin with home `/home/joplin`
     2. install nodejs 16
     3. install packages `vim git build-essential python curl dirmngr apt-transport-https lsb-release ca-certificates`
-    4. checkout your desired version from https://github.com/laurent22/joplin.git to /home/joplin
+    4. checkout your desired version from https://github.com/laurent22/joplin.git to `/home/joplin`
     
 2. collect expected files and folders and build joplin by running `joplin-build.sh`.  This must run as the joplin user. That is you can run it with `sudo -u joplin bash -x joplin-build.sh` to see what it's doing.
 
-3. create a new db `joplin` in postgres (running on the same or on another server) and adapt run.sh with your db credentials. You can use psql to do this, for example:
+3. create a new db `joplin` in postgres (running on the same or on another server) and adapt `run.sh` with your db credentials. You can use `psql` to do this, for example:
 
     ```sql
     sudo -u postgres psql
@@ -27,12 +27,12 @@
     APP_BASE_URL="https://joplin.mydomain.org"
     ````
     
-5. test run.sh
+5. test `run.sh`
 
     - To do that run it as the joplin user: `sudo -u joplin run.sh` and it should provide you with a URL to test like this:
         `App: Call this for testing: 'curl https://yourdomain/api/ping'`
 
-6. if run.sh works as expected the `curl` reports:
+6. if `run.sh` works as expected the `curl` reports:
     `{"status":"ok","message":"Joplin Server is running"}`
     then, you can use `joplin.service` to run joplin as a systemd service as follows:
 
@@ -44,7 +44,9 @@
     6. `sudo service joplin status`
     7. Then to the curl test again
 
-7. in the `websever` folder you find an configuration examples how to access the joplin server from your reverse proxy (if your webserver is not included, and you get it configured please contribue a config example)
+7. in the `webserver` folder you find an configuration examples how to access the Joplin server from your reverse proxy (if your webserver is not included, and you get it configured please contribute a config example)
+
+8. Once it's running you can surf to the server you tested with curl above in your browser (https://yourdomain), then login with the email `admin@localhost` and passowrd `admin`. Change the admin password, create yourself a new user and you're rolling.
 
 # Update
 
