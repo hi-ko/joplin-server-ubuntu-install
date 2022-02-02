@@ -47,6 +47,7 @@ npm run bootstrap
 # change.
 
 rsync -r joplin/packages/server/package*.json ./packages/server/
+cp joplin/Assets/WebsiteAssets/favicon.ico ./packages/server/public/
 npm run bootstrapServerOnly
 
 # Now copy the source files. Put lib and server last as they are more likely to change.
@@ -61,4 +62,3 @@ rsync -r joplin/packages/server/ ./packages/server/
 # Finally build everything, in particular the TypeScript files.
 
 npm run build
-
