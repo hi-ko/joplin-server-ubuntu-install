@@ -29,9 +29,22 @@
     
 5. test run.sh
 
-6. if run.sh works as expected you can use `joplin.service` to run joplin as a systemd service
+    - To do that run it as the joplin user: `sudo -u joplin run.sh` and it should provide you with a URL to test like this:
+        `App: Call this for testing: 'curl https://yourdomain/api/ping'`
 
-8. in the nginx folder you find an configuration example how to access the joplin server from your reverse proxy
+6. if run.sh works as expected the `curl` reports:
+    `{"status":"ok","message":"Joplin Server is running"}`
+    then, you can use `joplin.service` to run joplin as a systemd service as follows:
+
+    1. edit the `joplin.service` file to make sure in particular that `ExecStart` points to a copy of `run.sh` that is executeable and you tested above.
+    2. `sudo cp joplin.servce /etc/systemd/system`
+    3. `sudo systemctl daemon-reload`
+    4. `sudo systemctl enable joplin`
+    5. `sudo service joplin start`
+    6. `sudo service joplin status`
+    7. Then to the curl test again
+
+7. in the `websever` folder you find an configuration examples how to access the joplin server from your reverse proxy (if your webserver is not included, and you get it configured please contribue a config example)
 
 # Update
 
