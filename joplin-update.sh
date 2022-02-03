@@ -10,8 +10,8 @@ wget -O run.sh https://raw.githubusercontent.com/hi-ko/joplin-server-ubuntu-inst
 
 
 if [[ \ $*\  == *\ --full\ * ]] || [[ \ $*\  == *\ -f\ * ]]; then
-wget -O joplin-requirements.sh https://raw.githubusercontent.com/hi-ko/joplin-server-ubuntu-install/master/joplin-requirements.sh
-sudo bash /home/joplin/joplin-requirements.sh
+wget -O joplin-install.sh https://raw.githubusercontent.com/hi-ko/joplin-server-ubuntu-install/master/joplin-install.sh
+sudo bash /home/joplin/joplin-install.sh
 fi
 
 cd /home/joplin/joplin
