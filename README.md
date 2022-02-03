@@ -1,7 +1,7 @@
 # Install joplin server on Ubuntu (20.04)
 
-1. as root run `joplin-requirements.sh` to install the joplin requirements but please take this script with causion since it is not well tested in existing environments. Root privileges are needed packages are installed. You can run `sudo bash -x joplin-requirements.sh` to see what it's doing. 
-    You could also create the requirements by yourself by:
+1. as root run `joplin-install.sh` to install the joplin server but please take this script with caution since it is not well tested in many environments. Root privileges are needed because packages are installed. You can run `sudo bash -x joplin-install.sh` to see what it's doing. 
+    You could also install manually as follows:
     
     1. create user joplin with home `/home/joplin`
     2. install nodejs 16
