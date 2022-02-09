@@ -1,0 +1,30 @@
+## URL configuration
+## The server presents a web interface here
+
+# APP_BASE_URL=https://joplin.me.org
+# APP_PORT=22300
+
+## Database configuration
+
+# POSTGRES_PASSWORD=joplin
+# DB_CLIENT=pg
+# POSTGRES_DATABASE=joplin
+# POSTGRES_USER=joplin
+# POSTGRES_PORT=5432
+# POSTGRES_HOST=localhost
+
+## Email configuration
+
+# MAILER_ENABLED=1
+# MAILER_HOST=smtp.me.org
+# MAILER_PORT=465
+# MAILER_SECURE=-1
+# MAILER_AUTH_USER=me@me.org
+# MAILER_AUTH_PASSWORD=joplin
+
+## Emails are sent "From:" this "name <email>"
+## The account logged into MAILER_HOST as MAILER_AUTH_USER
+## Must be authorised send emails "From: " this "name <email>"
+
+# MAILER_NOREPLY_NAME=Joplin Server
+# MAILER_NOREPLY_EMAIL=noreply@me.org

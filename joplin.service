@@ -4,11 +4,10 @@ Documentation=https://discourse.joplinapp.org/t/joplin-server-pre-release-is-now
 After=network.target
 
 [Service]
-#Environment=NODE_PORT=3001
 Type=simple
 User=joplin
-ExecStart=/home/joplin/run.sh
-WorkingDirectory=/home/joplin
+ExecStart=/opt/joplin/joplin.sh run
+WorkingDirectory=/opt/joplin/
 
 Restart=on-failure
 
