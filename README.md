@@ -37,7 +37,7 @@
     then, you can use `joplin.service` to run joplin as a systemd service as follows:
 
     1. edit the `joplin.service` file to make sure in particular that `ExecStart` points to a copy of `run.sh` that is executeable and you tested above.
-    2. `sudo cp joplin.servce /etc/systemd/system`
+    2. `sudo cp joplin.service /etc/systemd/system`
     3. `sudo systemctl daemon-reload`
     4. `sudo systemctl enable joplin`
     5. `sudo service joplin start`
@@ -46,7 +46,7 @@
 
 7. in the `webserver` folder you find an configuration examples how to access the Joplin server from your reverse proxy (if your webserver is not included, and you get it configured please contribute a config example)
 
-8. Once it's running you can surf to the server you tested with curl above in your browser (https://yourdomain), then login with the email `admin@localhost` and passowrd `admin`. Change the admin password, create yourself a new user and you're rolling.
+8. Once it's running you can surf to the server you tested with curl above in your browser (https://yourdomain), then login with the email `admin@localhost` and password `admin`. Change the admin password, create yourself a new user and you're rolling.
 
 # Update
 
