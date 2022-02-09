@@ -1,0 +1,21 @@
+# outward url like https://subdomain.domain.tld:custom_port/joplin
+#APP_BASE_URL=
+#APP_PORT=22300
+#export MAX_TIME_DRIFT=160
+# enable SMTP of Joplin
+#export MAILER_ENABLED=1
+#export MAILER_HOST=
+#export MAILER_PORT=587
+#export MAILER_SECURE=0
+#export MAILER_AUTH_USER=
+#export MAILER_AUTH_PASSWORD=
+#export MAILER_NOREPLY_NAME=
+#export MAILER_NOREPLY_EMAIL=
+# the connection to your database
+#DB_CLIENT=pg
+#POSTGRES_PASSWORD=
+#POSTGRES_DATABASE=
+#POSTGRES_USER=
+#POSTGRES_PORT=5432
+#POSTGRES_HOST=localhost
+#export RUNNING_IN_DOCKER=1
