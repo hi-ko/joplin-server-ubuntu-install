@@ -56,6 +56,7 @@ build(){
     COPY packages/tools ./packages/tools
     COPY packages/lib ./packages/lib
     COPY packages/server ./packages/server
+    COPY packages/plugins ./packages/plugins
 
     BUILD_SEQUENCIAL=1 yarn install --inline-builds \
         && yarn cache clean \
