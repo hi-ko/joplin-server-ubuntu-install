@@ -43,4 +43,4 @@ JOPLIN_USER=joplin
 id -u $JOPLIN_USER &>/dev/null || sudo useradd --create-home --shell /bin/bash $JOPLIN_USER
 
 mkdir -p $JOPLIN_HOME
-chmod $JOPLIN_USER: $JOPLIN_HOME
+chown $JOPLIN_USER: $JOPLIN_HOME
