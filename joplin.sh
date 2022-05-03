@@ -37,6 +37,11 @@ checkout_latest(){
 }
 
 build(){
+    if [ ! -d "$WORKDIR" ]; then
+        mkdir -p $WORKDIR
+        echo "created " $WORKDIR
+        fi
+
     cd $WORKDIR
     COPY .yarn/plugins ./.yarn/plugins
     COPY .yarn/releases ./.yarn/releases
