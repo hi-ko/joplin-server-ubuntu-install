@@ -14,7 +14,7 @@ else
     echo ""
 fi
 
-JOPLIN_HOME="$JOPLIN_HOME:-/opt/joplin}"
+JOPLIN_HOME="${JOPLIN_HOME:-/opt/joplin}"
 
 apt update
 apt -y install vim git
