@@ -1,4 +1,4 @@
-# Install joplin server on Ubuntu (20.04)
+# Install joplin server on Ubuntu (20.04, 22.04)
 
 1. as root run `joplin-requirements.sh` to install the joplin requirements but please take this script with causion since it is not well tested in existing environments. Root privileges are needed to get the packages to be installed. You can run `sudo bash -x joplin-requirements.sh` to see what it's doing. 
 
@@ -51,18 +51,29 @@
 
 # Update
 
+```
+sudo systemctl stop joplin
+```
+
+then as user joplin:
 ````
 cd ~/joplin
-git fetch --tags
+./joplin.sh checkout-latest
+./joplin.sh build
 ````
-then checkout the new version from the tag history e.g.
-````
-git checkout server-v2.6.9
-````
-then stop your joplin server and build latest version
-````
-cd ~/
-~/joplin-build.sh
-````
+
+if build run successfull you could install and test:
+
+```
+./joplin.sh install
+./joplin.sh run
+```
+
+if joplin server starts without error you could exit with ctl-c and start the service
+
+```
+sudo systemctl start joplin
+```
+
 
 s. [Joplin Server pre-release is now available](https://discourse.joplinapp.org/t/joplin-server-pre-release-is-now-available/13605/176)
