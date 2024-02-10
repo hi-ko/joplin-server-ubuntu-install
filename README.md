@@ -1,14 +1,15 @@
 # Install joplin server on Ubuntu (20.04)
 
-1. as root run `joplin-requirements.sh` to install the joplin requirements but please take this script with causion since it is not well tested in existing environments. Root privileges are needed packages are installed. You can run `sudo bash -x joplin-requirements.sh` to see what it's doing. 
+1. as root run `joplin-requirements.sh` to install the joplin requirements but please take this script with causion since it is not well tested in existing environments. Root privileges are needed to get the packages to be installed. You can run `sudo bash -x joplin-requirements.sh` to see what it's doing. 
+
     You could also create the requirements by yourself by:
     
     1. create user joplin with home `/home/joplin`
-    2. install nodejs 16
+    2. install nodejs 18
     3. install packages `vim git build-essential python curl dirmngr apt-transport-https lsb-release ca-certificates`
     4. checkout your desired version from https://github.com/laurent22/joplin.git to `/home/joplin`
     
-2. collect expected files and folders and build joplin by running `joplin-build.sh`.  This must run as the joplin user. That is you can run it with `sudo -u joplin bash -x joplin-build.sh` to see what it's doing.
+2. collect expected files and folders and build joplin by running `joplin.sh build`.  This must be run as the joplin user. If you run it with debug flag `sudo -u joplin bash -x joplin.sh build` you could see what's it's doing.
 
 3. create a new db `joplin` in postgres (running on the same or on another server) and adapt `run.sh` with your db credentials. You can use `psql` to do this, for example:
 
