@@ -37,9 +37,17 @@ checkout_latest(){
 }
 
 build(){
+    if [ ! -d "$WORKDIR" ]; then
+        echo "build dir $WORKDIR does not exist!"
+        exit 1
+    fi
+    
+    rm -r ${WORKDIR}/*
     cd $WORKDIR
+    
     COPY .yarn/plugins ./.yarn/plugins
     COPY .yarn/releases ./.yarn/releases
+    COPY .yarn/patches ./.yarn/patches
     COPY package.json .
     COPY .yarnrc.yml .
     COPY yarn.lock .
@@ -54,12 +62,13 @@ build(){
     COPY packages/htmlpack ./packages/htmlpack
     COPY packages/renderer ./packages/renderer
     COPY packages/tools ./packages/tools
+    COPY packages/utils ./packages/utils
     COPY packages/lib ./packages/lib
     COPY packages/server ./packages/server
 
     BUILD_SEQUENCIAL=1 yarn install --inline-builds \
-        && yarn cache clean \
-        && rm -rf .yarn/berry
+    && yarn cache clean \
+    && rm -rf .yarn/berry
 }
 
 install(){
